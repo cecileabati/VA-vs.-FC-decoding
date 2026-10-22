@@ -1,0 +1,5 @@
+{
+  "vault_root": "/absolute/path/to/project/root",
+  "conn_base": "new_conn_preprocessing_160725",
+  "perm_scratch": "/tmp/photon_perms"
+}

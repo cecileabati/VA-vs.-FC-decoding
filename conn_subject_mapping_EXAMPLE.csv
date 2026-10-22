@@ -1,0 +1,3 @@
+conn_subject,original_id,functional_file,structural_file
+1,SUB001,/path/to/wauSUB001_NewFaces.nii,/path/to/wc0cT1_SUB001.nii
+2,SUB002,/path/to/wauSUB002_NewFaces.nii,/path/to/wc0cT1_SUB002.nii
