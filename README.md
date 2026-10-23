@@ -119,8 +119,8 @@ pre-denoising) and passed to SPM via `multi_reg`, so both arms regress out
 literally the same timeseries.
 
 - FC arm: bandpass 0.01–0.1 Hz, no detrending, despiking after regression
-  (RegBP). df = (210 − 1 − 32) × 0.378 = 66.9
-- VA arm: high-pass 128 s, AR(1) prewhitening, no bandpass. Residual df ≈ 164
+  (RegBP). 
+- VA arm: high-pass 128 s, AR(1) prewhitening, no bandpass. 
 
 **Masking.** `mthresh = -Inf` disables SPM's implicit masking; the explicit mask
 is the atlas (or the 30-ROI mask). Both arms therefore have identical spatial
