@@ -109,7 +109,7 @@ results from different runs cannot overwrite one another.
 
 ---
 
-## Key analysis choices
+## Analysis specifics 
 
 **Denoising (both arms share the same nuisance model).**
 5 WM + 5 CSF aCompCor components and 6 motion parameters, all with first
@@ -121,10 +121,6 @@ literally the same timeseries.
 - FC arm: bandpass 0.01–0.1 Hz, no detrending, despiking after regression
   (RegBP). df = (210 − 1 − 32) × 0.378 = 66.9
 - VA arm: high-pass 128 s, AR(1) prewhitening, no bandpass. Residual df ≈ 164
-
-Filtering and autocorrelation handling differ **deliberately**: a 0.1 Hz
-low-pass suits sustained coupling but would smooth away the event-locked
-response the betas are built on.
 
 **Masking.** `mthresh = -Inf` disables SPM's implicit masking; the explicit mask
 is the atlas (or the 30-ROI mask). Both arms therefore have identical spatial
