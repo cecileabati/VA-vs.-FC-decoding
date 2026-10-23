@@ -6,7 +6,7 @@ representations **voxel-wise activation (VA)** and **functional connectivity
 
 - **Sample:** Münster Neuroimaging Cohort, 389 healthy participants scanned;
   n = 372 after exclusions (see [Key analysis choices](#key-analysis-choices))
-- **Task:** EFMT, mixed block/event design, 210 volumes, TR = 2.1 s (441 s run)
+- **Task:** EFMT, mixed block/event design, 210 volumes, TR = 2.1 s (438s s run)
 - **Conditions:** 5: shape blocks (36 s) plus neutral / angry / happy / fearful
   face events (2 s, 12x)
 - **Parcellation:** Brainnetome (246 regions), plus a 30-ROI subset (based on Fusar-Poli et al., 2009)
@@ -24,8 +24,7 @@ cp paths.example.json paths.json     # then edit the values
 python3 project_paths.py             # prints every path and whether it exists
 ```
 
-`project_paths.py` exits non-zero if an input path is missing, so it doubles as
-a pre-flight check in a job script.
+`project_paths.py` exits non-zero if an input path is missing.
 
 | key | points at |
 |---|---|
@@ -34,7 +33,7 @@ a pre-flight check in a job script.
 | `perm_scratch` | node-local scratch for per-permutation PHOTONAI logging |
 
 Everything else — beta-map folders, CONN first-level folders, the subject
-mapping CSV, the ROI mask — is a fixed layout beneath those and is derived by
+mapping CSV, the ROI mask, is a fixed layout beneath those and is derived by
 the loaders, so this repository documents the directory structure it expects
 without containing anyone's paths.
 
@@ -47,7 +46,7 @@ committed by accident.
 3. `config/paths.json`
 4. `~/.vafc_paths.json`
 
-Both languages read the same file. `project_paths.py` exposes module constants,
+Both read the same file. `project_paths.py` exposes module constants,
 `project_paths.m` returns a struct.
 
 ---
@@ -129,8 +128,7 @@ response the betas are built on.
 
 **Masking.** `mthresh = -Inf` disables SPM's implicit masking; the explicit mask
 is the atlas (or the 30-ROI mask). Both arms therefore have identical spatial
-support, so the VA/FC comparison contrasts representations rather than fields of
-view.
+space, so the VA/FC comparison contrasts representations rather than different brain areas included.
 
 **Decoding.** Nested cross-validation with `StratifiedGroupKFold`, grouped by
 subject. Permutations shuffle condition labels **within** subject; FC and beta
