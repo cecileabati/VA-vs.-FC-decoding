@@ -10,7 +10,7 @@ representations **voxel-wise activation (VA)** and **functional connectivity
 - **Conditions:** 5: shape blocks (36 s) plus neutral / angry / happy / fearful
   face events (2 s, 12x)
 - **Parcellation:** Brainnetome (246 regions), plus a 30-ROI subset (based on Fusar-Poli et al., 2009)
-- **Preregistration:** *(OSF link)*
+- **Preregistration:** *[(OSF link)](https://osf.io/gub38/overview? view_only=77bf180f6e784c1493d0905a083ab102 )*
 
 ---
 
