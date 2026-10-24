@@ -95,8 +95,8 @@ SCOPE = "roi"            # reads Brainnetome_30ROIs/ + the 30ROI beta maps
 
 | Scope | VA features | FC features |
 |---|---|---|
-| `whole_brain` | ~127,000 voxels | 30,135 edges (246 regions) |
-| `roi` | subset inside the 30-ROI mask | 435 edges (30 regions) |
+| `whole_brain` | 127’947 voxels | 30,135 edges (246 regions) |
+| `roi` | 17’842 voxels | 435 edges (30 regions) |
 
 The two must match: running the GLM as `whole_brain` and the decoding as `roi`
 would read beta maps and FC matrices from different feature spaces. Nothing
